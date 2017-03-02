@@ -7,7 +7,8 @@ Right4Me was built by SSW during the Microsoft Hack4Good event. Over two days, 1
 and around 70 people gathered at the University of NSW, in Sydney to explore the potential
 of technology to help people living with a disability fulfil their potential.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6B7SywxEiMk" frameborder="0" allowfullscreen></iframe>
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/6B7SywxEiMk/0.jpg)](https://www.youtube.com/watch?v=6B7SywxEiMk)
 
 ## Getting Started
 
