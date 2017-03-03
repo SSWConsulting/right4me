@@ -1,0 +1,46 @@
+﻿<h1>Add Product</h1>
+<form>
+	<div class="form-group form-group-lg">
+		<div class="clearfix">
+			<label for="title" class="control-label">Product Title</label>
+			<span class="help-block pull-right"><em>Required</em></span>
+		</div>
+		<input type="text" id="title" name="Title" [(ngModel)]="product.title" handleValidation #name="ngModel" class="form-control"
+			placeholder="Product title" required>
+	</div>
+
+	<div class="form-group form-group-lg">
+		<div class="clearfix">
+			<label for="category">Suitable Catergory</label>
+		</div>
+			<select [(ngModel)]="product.category" class="form-control" name="Category">
+				<option [value]="0">-</option>
+				<option [value]="1">Clothes</option>
+				<option [value]="2">Technology</option>
+				<option [value]="3">Furniture</option>
+			</select>
+	</div>
+	<div class="form-group form-group-lg">
+		<div class="clearfix">
+			<label for="imageUrl" class="control-label">Image Url</label>
+		</div>
+		<input type="text" id="imageUrl" name="Image" handleValidation [(ngModel)]="product.image" class="form-control" placeholder="Image Url">
+	</div>
+	<div class="form-group form-group-lg">
+		<div class="clearfix">
+			<label for="purchaseLink" class="control-label">Purchase Link</label>
+		</div>
+		<input type="text" id="purchaseLink" name="Url" handleValidation [(ngModel)]="product.url" class="form-control"
+			placeholder="Purchase Link">
+	</div>
+	<div class="form-group form-group-lg">
+		<div class="clearfix">
+			<label for="description">Description</label>
+		</div>
+		<textarea id="description" textarea rows="4" cols="50" name="Description" [(ngModel)]="product.description" class="form-control"></textarea>
+	</div>
+    <!--<rating name="product.rating" [max]="max" [readonly]="isReadonly" [(ngModel)]="rating" [titles]="['one','two','three']"></rating>-->
+	<div class="form-group form-group-lg">
+		<button class="btn btn-default" (click)="saveForm()">Submit</button>
+	</div>
+</form>

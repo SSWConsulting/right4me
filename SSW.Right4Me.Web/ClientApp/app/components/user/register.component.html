@@ -1,0 +1,62 @@
+﻿<h1>Create Account</h1>
+
+<form>
+    <div class="form-group form-group-lg">
+        <div class="clearfix">
+            <label for="firstName" class="control-label">First Name</label>
+            <span class="pull-right help-block"><em>Required</em></span>
+        </div>
+        <input id="firstName" type="text" required="required" class="form-control" handleValidation placeholder="Jane" [(ngModel)]="model.firstName"
+            name="FirstName" />
+    </div>
+
+    <div class="form-group form-group-lg">
+        <div class="clearfix">
+            <label for="lastName" class="control-label">Last Name</label>
+            <span class="pull-right help-block"><em>Required</em></span>
+        </div>
+        <input id="lastName" type="text" required="required" class="form-control" handleValidation placeholder="Doe" [(ngModel)]="model.lastName"
+            name="LastName" />
+    </div>
+
+    <div class="form-group form-group-lg">
+        <div class="clearfix">
+            <label for="email" class="control-label">Email</label>
+            <span class="pull-right help-block"><em>Required</em></span>
+        </div>
+        <input id="email" type="text" required="required" class="form-control" handleValidation placeholder="janedoe@example.au"
+            [(ngModel)]="model.email" name="Email" />
+    </div>
+
+    <div class="form-group form-group-lg">
+        <div class="clearfix">
+            <label for="userName" class="control-label">Username</label>
+            <span class="pull-right help-block"><em>Required</em></span>
+        </div>
+        <input id="userName" type="text" required="required" class="form-control" handleValidation placeholder="JaneDoe87" [(ngModel)]="model.userName"
+            name="UserName" />
+    </div>
+
+    <div class="form-group form-group-lg">
+        <div class="clearfix">
+            <label for="password" class="control-label">Password</label>
+            <span class="pull-right help-block"><em>Required</em></span>
+        </div>
+        <input id="password" type="password" required="required" class="form-control" handleValidation placeholder="Password" [(ngModel)]="model.password"
+            name="Password" />
+    </div>
+
+    <div class="form-group form-group-lg">
+        <div class="clearfix">
+            <label for="confirmPassword" class="control-label">Confirm Password</label>
+            <span class="pull-right help-block"><em>Required</em></span>
+        </div>
+        <input id="confirmPassword" type="password" required="required" class="form-control" handleValidation placeholder="Confirm Password"
+            [(ngModel)]="model.confirmPassword" name="ConfirmPassword" />
+    </div>
+    <input type="button" class="btn btn-primary btn-lg" value="Submit" (click)="register()" />
+
+    <div class="form-group has-error" handleValidation>
+        <p class="help-block text-center"></p>
+    </div>
+</form>

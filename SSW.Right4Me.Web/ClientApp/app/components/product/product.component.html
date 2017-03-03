@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img [src]="product.image" />
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div>
+            <h2>{{product.title}}</h2>
+            <p>{{product.description}}</p>
+        </div>
+        <div>
+            <h3>Needs</h3>
+            <div *ngFor="let review of product.accessibilityReviews" class="needs">
+                <rating name="rating" [max]="max" [readonly]="true" [(ngModel)]="review.rating"></rating>
+                {{review.accessibilityNeed}}
+            </div>
+        </div>
+        <div>
+            <h3>Reviews</h3>
+            <div *ngFor="let review of product.reviews" class="review">
+                <img [src]="getGravatarImage(review.userEmail)" style="max-height:30px" />
+                <rating name="rating" [max]="max" [readonly]="true" [(ngModel)]="review.rating"></rating>
+                <div *ngIf="review.description" class="description"> {{review.description}} </div>
+            </div>
+        </div>
+        <a class="btn btn-primary" [routerLink]="['/product-review',product.id]">Add a Review</a>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<h1>Add Review</h1>
+<form>
+    <div class="form-group form-group-lg">
+        <div class="clearfix">
+            <label for="product">Product</label>
+        </div>
+        <div id="product" class="form-control-static">{{review.productName}}</div>
+    </div>
+    <rating name="rating" [max]="max" [readonly]="isReadonly" [(ngModel)]="review.rating" [titles]="['one','two','three']"></rating>
+    <div class="form-group form-group-lg">
+        <div class="clearfix">
+            <label for="purchaseLink">Your Review</label>
+        </div>
+        <textarea textarea rows="4" cols="50" id="review" name="review" class="form-control" [(ngModel)]="review.description" placeholder="Review Text"></textarea>
+    </div>
+    <!--<div class="form-group form-group-lg">
+		<div class="clearfix">
+			<label for="purchaseLink">Review Tags</label>
+			<span class="help-block pull-right"><em>Required</em></span>
+		</div>
+		<input type="text" id="tags" name="tags"  class="form-control" placeholder="Review tags">
+	</div>-->
+    <div class="form-group form-group-lg">
+        <button class="btn btn-default" (click)="saveForm()">Submit</button>
+    </div>
+</form>

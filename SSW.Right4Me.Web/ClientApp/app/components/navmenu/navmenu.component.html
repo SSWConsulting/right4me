@@ -1,0 +1,71 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/home']">right4me.io</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-list-ul">&nbsp;</span>Browse Categories</a>
+					<div class="dropdown-menu category-menu">
+						<div class="col-sm-4">
+							<ul>
+								<li><a [routerLink]="['/product-list',1]">Clothes <span class="badge">500</span></a></li>
+								<li><a [routerLink]="['/product-list',2]">Technology <span class="badge">500</span></a></li>
+								<li><a [routerLink]="['/product-list',3]">Furniture <span class="badge">500</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['/product-edit',0]">
+                        Add Product
+                    </a>
+                </li>
+                <!--<li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/user']">
+                        <span class="glyphicon glyphicon-user"></span> User
+                    </a>
+                </li>-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li routerLinkActive="active" *ngIf="!user">
+                    <a [routerLink]="['/login']">
+                        Login
+                    </a>
+                </li>
+                <li routerLinkActive="active" *ngIf="!user">
+                    <a routerLink="register">Register</a>
+                </li>
+                <li *ngIf="user" class="avatar">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img [src]="getGravatarImage(user.email)" [alt]="user.firstName+' '+user.lastName" class="img-responsive">
+                        </button>
+                        <ul class="dropdown-menu pull-right">
+                            <li>
+                                <a class="clearfix" routerLink="/profile">
+                                    <span class="pull-left"><i class="fa fa-user" aria-hidden="true"></i> Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="clearfix" routerLink="/" (click)="logout()">
+                                    <span class="pull-left"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--<span class="navbar-text" (click)="viewProfile()">
+                        Welcome, {{ user.firstName }} {{ user.lastName }}!
+                    </span>-->
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

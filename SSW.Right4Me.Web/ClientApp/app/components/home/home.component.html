@@ -1,0 +1,80 @@
+<div class="hero row">
+	<div class="jumbotron">
+		<h1>Is it right for me?</h1>
+		<p>Product reviews by members of the disabled community.</p>
+		<form class="form-inline hero-search">
+			<div class="form-group form-group-lg">
+				<label for="search" class="sr-only">Search Criteria</label>
+				<input id="search" type="text" class="form-control" placeholder="I'm looking for..." />
+			</div>
+			<div class="form-group form-group-lg">
+				<label for="categories" class="sr-only">Category</label>
+				<select id="categories" class="form-control">
+					<option selected="selected">All Categories</option>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-primary btn-lg">Search</button>
+		</form>
+	</div>
+	</div>
+<div class="container">
+	<div class="intro row">
+		<div class="col-sm-4 hidden-xs text-center">
+			<img src="/images/talk-bg.png" alt="two speech bubbles discussing a disability symbol " />
+		</div>
+		<div class="col-sm-8">
+			<h2>It's hard to find what you need.</h2>
+			<p>Whether you're a person living with a disability or a caregiver for someone else, it's not always easy to find the right product or service to suit your requirements. You need something that fits your budget and lifestyle, and you want to know if it is the right fit before you buy. Right4Me provides 100% community created reviews from people just like you.</p>
+		</div>
+	</div>
+</div>
+
+	<div class="features row">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<a [routerLink]="['/add-product']" class="card one">
+						<h3>Review</h3>
+						<p>Do you know a great product that can help others? Share your experience.</p>
+					</a>
+
+				</div>
+				<div class="col-sm-6">
+					<a [routerLink]="['/add-product']" class="card two">
+						<h3>Find</h3>
+						<p>Find the best accessible products, services and websites that suit your needs.</p>
+					</a>
+				</div>
+				<div class="col-sm-6">
+					<a [routerLink]="['/add-product']" class="card three">
+						<h3>Improve</h3>
+						<p>Send feedback and petition manufacturers and providers to improve accessiblity.</p>
+
+					</a>
+				</div>
+				<div class="col-sm-6">
+					<a [routerLink]="['/add-product']" class="card four">
+						<h3>Recommend</h3>
+						<p>Not sure what you're after? Let the community suggest something right 4 you.</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer row">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-7">
+					<h4>RIGHT4ME.IO</h4>
+					<p>© 2016 Right4me.io. All Rights Reserved. Right4me is a platform for people to share their experience of different products. The comments and reviews on selected products are opinions of the users and as such the views expressed do not reflect the opinion of Right4me.io. Please read our <a>Terms and Conditions</a>.</p>
+				</div>
+				<div class="col-sm-3 col-sm-offset-1">
+					<h4>Looking for something?</h4>
+					<a>Write a review</a><br />
+					<a>Post Guidelines</a><br />
+					<a>Terms & Conditions</a><br />
+					<a>Privacy Statement</a>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,439 @@
+// Cosmo 3.3.7
+// Bootswatch
+// -----------------------------------------------------
+
+@web-font-path: "https://fonts.googleapis.com/css?family=Rubik:400,700";
+
+.web-font(@path) {
+	@import url("@{path}");
+}
+
+.web-font(@web-font-path);
+
+// Navbar =====================================================================
+html {
+	font-size: 14px;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+
+.body-content {
+	margin-top: 28px;
+}
+
+.navbar {
+	font-family: @headings-font-family;
+	font-size: 1.12rem;
+
+	.navbar-brand {
+		font-weight: 700;
+	}
+
+	.navbar-nav > li > a {
+		line-height: normal;
+	}
+
+	.category-menu {
+		ul {
+			list-style-type: none;
+			margin-left: 0;
+			padding-left: 0;
+
+			a {
+				font-size: 1.12rem;
+				display: block;
+				line-height: 3rem;
+				padding-left: 1rem;
+				color: #fff;
+
+				&:hover {
+					background: darken(@navbar-inverse-link-active-bg, 5%);
+				}
+			}
+		}
+	}
+
+	&-inverse {
+		border-width: 0px;
+
+		.badge {
+			color: @gray-light;
+			font-size: 0.9rem;
+			font-weight: normal;
+			font-family: Arial;
+			background: none;
+			padding: 0;
+		}
+	}
+}
+
+.hero {
+	background: url('/images/hero-bg.jpg') no-repeat center center;
+	background-size: cover;
+
+	.jumbotron {
+		background: url('/images/dotted-pattern-bg.png') repeat transparent;
+		color: #fff;
+		text-align: center;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		margin: 0;
+	}
+
+	h1 {
+		line-height: 1em;
+		margin: 0;
+	}
+
+}
+
+.intro, .features, .footer {
+	line-height: 1.7em;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+.features {
+	background: #eee;
+
+	.card {
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+		padding: 3rem;
+		display: block;
+		overflow: auto;
+		margin-bottom: 1rem;
+		text-align: center;
+
+		&.one {
+			background-image: url('/images/feature-01.jpg');
+		}
+
+		&.two {
+			background-image: url('/images/feature-02.jpg');
+		}
+
+		&.three {
+			background-image: url('/images/feature-03.jpg');
+		}
+
+		&.four {
+			background-image: url('/images/feature-04.jpg');
+		}
+
+		&:hover {
+			text-decoration: none !important;
+		}
+
+		p {
+			color: #fff;
+		}
+	}
+}
+
+.footer {
+	background: #000;
+	color: #fff;
+}
+
+// Media  ====================================================================
+
+@media (min-width: 768px) {
+	html{
+		font-size: 18px;
+	}
+	.body-content {
+	margin-top: 30px;
+}
+	.hero{
+
+			.jumbotron {
+		padding-top: 16rem;
+				padding-bottom: 5rem;
+	}
+	.hero-search {
+		.form-control, input {
+			border: 0;
+			box-shadow: none;
+		}
+
+		#search {
+			border-radius: 10px 0px 0px 10px;
+		}
+
+		#categories {
+			margin-left: -5px;
+			border-left: 1px solid #ccc;
+			margin-right: -5px;
+			padding-right: 30px;
+		}
+
+		.btn {
+			border-radius: 0px 10px 10px 0px;
+			height: @input-height-large;
+		}
+	}
+	}
+	.navbar{
+			.dropdown-menu {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		background: @navbar-inverse-link-active-bg;
+		border-color: @navbar-inverse-link-active-bg;
+		color: #fff;
+		position: fixed;
+		top: auto;
+		width: 100%;
+	}
+	}
+}
+
+// Typography =================================================================
+
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+.text-primary,
+.text-primary:hover {
+	color: @brand-primary;
+}
+
+.text-success,
+.text-success:hover {
+	color: @brand-success;
+}
+
+.text-danger,
+.text-danger:hover {
+	color: @brand-danger;
+}
+
+.text-warning,
+.text-warning:hover {
+	color: @brand-warning;
+}
+
+.text-info,
+.text-info:hover {
+	color: @brand-info;
+}
+
+// Tables =====================================================================
+
+table,
+.table {
+
+	a:not(.btn) {
+		text-decoration: underline;
+	}
+
+	.dropdown-menu a {
+		text-decoration: none;
+	}
+
+	.success,
+	.warning,
+	.danger,
+	.info {
+		color: #fff;
+
+		a {
+			color: #fff;
+		}
+	}
+}
+
+// Forms ======================================================================
+
+
+.has-warning {
+	.help-block,
+	.control-label,
+	.radio,
+	.checkbox,
+	.radio-inline,
+	.checkbox-inline,
+	&.radio label,
+	&.checkbox label,
+	&.radio-inline label,
+	&.checkbox-inline label,
+	.form-control-feedback {
+		color: @brand-warning;
+	}
+
+	.form-control,
+	.form-control:focus,
+	.input-group-addon {
+		border: 1px solid @brand-warning;
+	}
+}
+
+.has-error {
+	.help-block,
+	.control-label,
+	.radio,
+	.checkbox,
+	.radio-inline,
+	.checkbox-inline,
+	&.radio label,
+	&.checkbox label,
+	&.radio-inline label,
+	&.checkbox-inline label,
+	.form-control-feedback {
+		color: @brand-danger;
+	}
+
+	.form-control,
+	.form-control:focus,
+	.input-group-addon {
+		border: 1px solid @brand-danger;
+	}
+}
+
+.has-success {
+	.help-block,
+	.control-label,
+	.radio,
+	.checkbox,
+	.radio-inline,
+	.checkbox-inline,
+	&.radio label,
+	&.checkbox label,
+	&.radio-inline label,
+	&.checkbox-inline label,
+	.form-control-feedback {
+		color: @brand-success;
+	}
+
+	.form-control,
+	.form-control:focus,
+	.input-group-addon {
+		border: 1px solid @brand-success;
+	}
+}
+
+// Navs =======================================================================
+
+.nav-pills {
+
+	& > li > a {
+		border-radius: 0;
+	}
+}
+
+.dropdown-menu {
+
+	& > li > a:hover,
+	& > li > a:focus {
+		background-image: none;
+	}
+}
+
+// Indicators =================================================================
+
+.close {
+	text-decoration: none;
+	text-shadow: none;
+	opacity: 0.4;
+
+	&:hover,
+	&:focus {
+		opacity: 1;
+	}
+}
+
+.alert {
+	border: none;
+
+	.alert-link {
+		text-decoration: underline;
+		color: #fff;
+	}
+}
+
+.label {
+	border-radius: 0;
+}
+
+// Progress bars ==============================================================
+
+.progress {
+	height: 8px;
+	.box-shadow(none);
+
+	.progress-bar {
+		font-size: 8px;
+		line-height: 8px;
+	}
+}
+
+// Containers =================================================================
+
+.panel {
+	&-heading,
+	&-footer {
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+	}
+
+	&-default {
+		.close {
+			color: @text-color;
+		}
+	}
+}
+
+a.list-group-item {
+
+	&-success {
+		&.active {
+			background-color: @state-success-bg;
+		}
+
+		&.active:hover,
+		&.active:focus {
+			background-color: darken(@state-success-bg, 5%);
+		}
+	}
+
+	&-warning {
+		&.active {
+			background-color: @state-warning-bg;
+		}
+
+		&.active:hover,
+		&.active:focus {
+			background-color: darken(@state-warning-bg, 5%);
+		}
+	}
+
+	&-danger {
+		&.active {
+			background-color: @state-danger-bg;
+		}
+
+		&.active:hover,
+		&.active:focus {
+			background-color: darken(@state-danger-bg, 5%);
+		}
+	}
+}
+
+.modal {
+	.close {
+		color: @text-color;
+	}
+}
+
+.popover {
+	color: @text-color;
+}

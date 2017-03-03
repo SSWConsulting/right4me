@@ -1,0 +1,21 @@
+﻿<h1>Login</h1>
+
+<form>
+    <h2>Please sign in</h2>
+
+    <div class="form-group form-group-lg">
+        <label for="userName" class="control-label">Username</label>
+        <input id="userName" name="UserName" type="text" required="required" class="form-control" handleValidation placeholder="Username" [(ngModel)]="login.userName"/>
+    </div>
+
+    <div class="form-group form-group-lg">
+        <label for="password" class="control-label">Password</label>
+        <input id="password" name="Password" type="password" required="required" class="form-control" handleValidation placeholder="Password" [(ngModel)]="login.password"/>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="submit()">Login</button>
+
+    <div class="form-group has-error" handleValidation>
+        <p class="help-block text-center"></p>
+    </div>
+</form>
