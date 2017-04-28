@@ -1,0 +1,145 @@
+﻿<Project ToolsVersion="15.0" Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="6.4.0-beta8" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.0" />
+    <PackageReference Include="NSwag.AspNetCore" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Files not to show in IDE -->
+    <None Remove="yarn.lock" />
+
+    <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
+    <Content Remove="ClientApp\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientApp\app\services\md5.js" />
+    <Content Include="ClientApp\app\services\md5.js.map" />
+    <Content Include="ClientApp\app\services\md5.ts" />
+    <Content Include="ClientApp\app\services\register.service.js" />
+    <Content Include="ClientApp\app\services\register.service.js.map" />
+    <Content Include="ClientApp\app\services\register.service.ts" />
+    <Content Include="ClientApp\app\services\review.service.js" />
+    <Content Include="ClientApp\app\services\review.service.js.map" />
+    <Content Include="ClientApp\app\services\review.service.ts" />
+    <Content Include="ClientApp\app\services\user.service.js" />
+    <Content Include="ClientApp\app\services\user.service.js.map" />
+    <Content Include="ClientApp\app\services\user.service.ts" />
+    <Content Include="ClientApp\app\services\validation.service.js" />
+    <Content Include="ClientApp\app\services\validation.service.js.map" />
+    <Content Include="ClientApp\app\services\validation.service.ts" />
+    <Content Include="wwwroot\css\bootstrap\css\.csscomb.json" />
+    <Content Include="wwwroot\css\bootstrap\css\.csslintrc" />
+    <Content Include="wwwroot\css\bootstrap\css\alerts.less" />
+    <Content Include="wwwroot\css\bootstrap\css\badges.less" />
+    <Content Include="wwwroot\css\bootstrap\css\bootstrap.css" />
+    <Content Include="wwwroot\css\bootstrap\css\bootstrap.less" />
+    <Content Include="wwwroot\css\bootstrap\css\bootstrap.min.css" />
+    <Content Include="wwwroot\css\bootstrap\css\bootswatch.less" />
+    <Content Include="wwwroot\css\bootstrap\css\breadcrumbs.less" />
+    <Content Include="wwwroot\css\bootstrap\css\button-groups.less" />
+    <Content Include="wwwroot\css\bootstrap\css\buttons.less" />
+    <Content Include="wwwroot\css\bootstrap\css\carousel.less" />
+    <Content Include="wwwroot\css\bootstrap\css\close.less" />
+    <Content Include="wwwroot\css\bootstrap\css\code.less" />
+    <Content Include="wwwroot\css\bootstrap\css\component-animations.less" />
+    <Content Include="wwwroot\css\bootstrap\css\dropdowns.less" />
+    <Content Include="wwwroot\css\bootstrap\css\forms.less" />
+    <Content Include="wwwroot\css\bootstrap\css\glyphicons.less" />
+    <Content Include="wwwroot\css\bootstrap\css\grid.less" />
+    <Content Include="wwwroot\css\bootstrap\css\input-groups.less" />
+    <Content Include="wwwroot\css\bootstrap\css\jumbotron.less" />
+    <Content Include="wwwroot\css\bootstrap\css\labels.less" />
+    <Content Include="wwwroot\css\bootstrap\css\list-group.less" />
+    <Content Include="wwwroot\css\bootstrap\css\media.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\alerts.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\background-variant.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\border-radius.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\buttons.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\center-block.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\clearfix.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\forms.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\gradients.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\grid-framework.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\grid.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\hide-text.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\image.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\labels.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\list-group.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\nav-divider.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\nav-vertical-align.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\opacity.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\pagination.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\panels.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\progress-bar.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\reset-filter.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\reset-text.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\resize.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\responsive-visibility.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\size.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\tab-focus.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\table-row.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\text-emphasis.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\text-overflow.less" />
+    <Content Include="wwwroot\css\bootstrap\css\mixins\vendor-prefixes.less" />
+    <Content Include="wwwroot\css\bootstrap\css\modals.less" />
+    <Content Include="wwwroot\css\bootstrap\css\navbar.less" />
+    <Content Include="wwwroot\css\bootstrap\css\navs.less" />
+    <Content Include="wwwroot\css\bootstrap\css\normalize.less" />
+    <Content Include="wwwroot\css\bootstrap\css\pager.less" />
+    <Content Include="wwwroot\css\bootstrap\css\pagination.less" />
+    <Content Include="wwwroot\css\bootstrap\css\panels.less" />
+    <Content Include="wwwroot\css\bootstrap\css\popovers.less" />
+    <Content Include="wwwroot\css\bootstrap\css\print.less" />
+    <Content Include="wwwroot\css\bootstrap\css\progress-bars.less" />
+    <Content Include="wwwroot\css\bootstrap\css\responsive-embed.less" />
+    <Content Include="wwwroot\css\bootstrap\css\responsive-utilities.less" />
+    <Content Include="wwwroot\css\bootstrap\css\scaffolding.less" />
+    <Content Include="wwwroot\css\bootstrap\css\tables.less" />
+    <Content Include="wwwroot\css\bootstrap\css\theme.less" />
+    <Content Include="wwwroot\css\bootstrap\css\thumbnails.less" />
+    <Content Include="wwwroot\css\bootstrap\css\tooltip.less" />
+    <Content Include="wwwroot\css\bootstrap\css\type.less" />
+    <Content Include="wwwroot\css\bootstrap\css\utilities.less" />
+    <Content Include="wwwroot\css\bootstrap\css\variables.css" />
+    <Content Include="wwwroot\css\bootstrap\css\variables.less" />
+    <Content Include="wwwroot\css\bootstrap\css\variables.min.css" />
+    <Content Include="wwwroot\css\bootstrap\css\wells.less" />
+    <Content Include="wwwroot\css\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\css\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\css\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\css\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\css\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="wwwroot\css\bootstrap\js\bootstrap.js" />
+    <Content Include="wwwroot\css\bootstrap\js\bootstrap.min.js" />
+    <Content Include="wwwroot\css\Site.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSW.Right4Me.Db\SSW.Right4Me.Db.csproj" />
+    <ProjectReference Include="..\SSW.Right4Me.Domain\SSW.Right4Me.Domain.csproj" />
+  </ItemGroup>
+  <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec Command="npm install" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.prod" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --env.prod" />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="wwwroot\dist\**; ClientApp\dist\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+</Project>
