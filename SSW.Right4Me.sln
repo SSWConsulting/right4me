@@ -11,6 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSW.Right4Me.Elastic", "SSW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSW.Right4Me.WebUI", "SSW.Right4Me.WebUI\SSW.Right4Me.WebUI.csproj", "{7E58F7AB-3A62-4D86-ACF9-FBBB4224B4C0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A6D28556-89E2-4A53-9AFD-34B5874F2EBD}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
