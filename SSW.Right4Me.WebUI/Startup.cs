@@ -12,6 +12,8 @@ using NJsonSchema;
 using NSwag.AspNetCore;
 using SSW.Right4Me.Db;
 using SSW.Right4Me.Domain;
+using Mindscape.Raygun4Net;
+using Serilog;
 
 namespace SSW.Right4Me.WebUI
 {
@@ -24,6 +26,12 @@ namespace SSW.Right4Me.WebUI
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
+
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .Enrich.FromLogContext()
+                .CreateLogger();
+
             Configuration = builder.Build();
         }
 
@@ -49,6 +57,8 @@ namespace SSW.Right4Me.WebUI
                 })
                 .AddEntityFrameworkStores<Right4MeDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddRaygun(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +66,7 @@ namespace SSW.Right4Me.WebUI
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+            loggerFactory.AddSerilog();
 
             if (env.IsDevelopment())
             {
@@ -89,6 +100,8 @@ namespace SSW.Right4Me.WebUI
                     name: "spa-fallback",
                     defaults: new { controller = "Home", action = "Index" });
             });
+
+            app.UseRaygun();
 
             context.Database.Migrate();
             context.Seed();
