@@ -62,6 +62,7 @@ When your pull request is submitted, it will be reviewed by Jason. When it is ac
 * **Brendan Richards** - *The Linux Guy* - [SSW Solution Architect](https://sharepoint.ssw.com.au/AboutUs/Employees/Pages/Brendan.aspx)
 * **Duncan Hunter** - *Angular Ninja* - [SSW Software Architect](https://sharepoint.ssw.com.au/AboutUs/Employees/Pages/DuncanHunter.aspx)
 * **Thiago Passos** - *Lead Capoeira Instructor* - [SSW Solution Architect](https://sharepoint.ssw.com.au/AboutUs/Employees/Pages/Thiago.aspx)
+* **Adam Cogan** - *The Coganator* - [SSW Chief Architect & Microsoft Regional Director](https://sharepoint.ssw.com.au/AboutUs/Employees/Pages/Adam.aspx)
 
 See also the list of [contributors](https://github.com/sswconsulting/right4me/graphs/contributors) who participated in this project.
 
