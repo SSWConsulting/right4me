@@ -1,6 +1,7 @@
 # SSW Right4Me
 
 Right4Me allows the community to share information about products and services that meet specific disability needs. 
+The website has been turned off for now, but we have a picture of it:
 ![Image of Right4Me Website](https://raw.githubusercontent.com/SSWConsulting/right4me/master/Right4MeSite.png)
 
 ## Background Story
