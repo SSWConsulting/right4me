@@ -1,6 +1,7 @@
 # SSW Right4Me
 
 Right4Me allows the community to share information about products and services that meet specific disability needs. 
+![Image of Right4Me Website](https://raw.githubusercontent.com/SSWConsulting/right4me/master/Right4MeSite.png)
 
 ## Background Story
 Right4Me was built by SSW during the Microsoft Hack4Good event. Over two days, 14 teams, 
